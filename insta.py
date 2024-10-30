@@ -2,6 +2,11 @@ import instaloader
 
 loader = instaloader.Instaloader()
 
+username = input("Instagram kullanıcı adınızı girin: ")
+password = input("Instagram şifrenizi girin: ")
+
+loader.login(username, password)
+
 post_url = input("İndirmek istediğiniz Instagram gönderisinin URL'sini girin: ")
 
 try:
@@ -12,4 +17,3 @@ try:
     print("Video başarıyla indirildi.")
 except Exception as e:
     print("Bir hata oluştu:", e)
-  
